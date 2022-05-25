@@ -3,12 +3,15 @@
  */
 package tourmanagementsystem;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
+import com.cg.tourmanagement.Library;
+
+import static org.junit.Assert.*;
+
+public class LibraryTest {
+    @Test public void testSomeLibraryMethod() {
         Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
 }

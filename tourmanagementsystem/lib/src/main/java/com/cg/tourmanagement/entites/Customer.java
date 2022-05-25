@@ -1,17 +1,12 @@
-package com.cg.tourmanagment.entites;
+package com.cg.tourmanagement.entites;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="customer")
 public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +25,12 @@ public class Customer {
 	private String modeOfPayment;
 	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
 	private  TourInformationSystem Tour;
-	
+	public String getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -55,12 +55,6 @@ public class Customer {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public String getCustomerId() {
-		return customerId;
-	}
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
 	public String getGender() {
 		return gender;
 	}
@@ -79,8 +73,5 @@ public class Customer {
 	public void setTour(TourInformationSystem tour) {
 		Tour = tour;
 	}
-	
-	
-	
-
+    
 }

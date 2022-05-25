@@ -1,16 +1,12 @@
-package com.cg.tourmanagment.entites;
+package com.cg.tourmanagement.entites;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="tour_Informationsystem")
 public class TourInformationSystem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,7 +26,6 @@ public class TourInformationSystem {
 	@ManyToOne
 	@JoinColumn(name="customerId")
 	private Customer customer;
-	
 	public int getPackageId() {
 		return packageId;
 	}

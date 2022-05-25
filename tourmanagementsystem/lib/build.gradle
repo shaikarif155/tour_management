@@ -3,7 +3,7 @@
  *
  * This generated file contains a sample Java library project to get you started.
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
- * User Manual available at https://docs.gradle.org/7.4.2/userguide/building_java_projects.html
+ * User Manual available at https://docs.gradle.org/6.8/userguide/building_java_projects.html
  */
 
 plugins {
@@ -13,8 +13,8 @@ plugins {
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
-    mavenCentral()
+    // Use JCenter for resolving dependencies.
+    jcenter()
 }
 
 dependencies {
@@ -27,9 +27,4 @@ dependencies {
 	implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
 	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
 	implementation group : 'org.postgresql', name : 'postgresql', version: '42.2.18'
-}
-
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
 }

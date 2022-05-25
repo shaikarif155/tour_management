@@ -1,16 +1,11 @@
-package com.cg.tourmanagment.entites;
+package com.cg.tourmanagement.entites;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-@Entity
-@Table(name="tour_info")
+
 public class TourInfo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
